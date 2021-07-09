@@ -66,12 +66,12 @@ alone inevitably will leave hope for enterprise integration wanting.
 
 ***This*** is the ultimate motivation for OpenSourceCorp: to be a place where
 developers, engineers, sysadmins, designers, and all the other walks of
-work-life that work together to deliver real enterprise solutions. Knowledge is
+work-life can work together to deliver real enterprise solutions. Knowledge is
 power, and our mission is to bring more of this power to our industry -- a
-mission we pursue with one simple, unbreakable promise: to do ***every bit of
-our work 100% in the open***. Development, discussion, hosting, and anything
-else (that respects the privacy or personal security of our people) will be
-fully visible to anyone in the world.
+mission we pursue with one simple, unwavering promise: to do ***every bit of our
+work 100% in the open***. Development, discussion, hosting, and anything else
+(that respects the privacy or personal security of our people) will be fully
+visible to anyone in the world.
 
 So... wait, what's actually going on, here, then?
 -------------------------------------------------
@@ -83,13 +83,14 @@ CI/CD](https://github.com/opensourcecorp/brah) and
 [SCM](https://github.com/opensourcecorp/soup) systems, and others. Once we have
 some platforms in place, we'll start to deploy *actual* software onto those
 platforms, integrating them into the broader OSC ecosystem as it grows and
-matures. The dream is that if someone wants to see how do I hook up my company's
-source code management to our CI/CD pipeline, have it fetch its secrets, deploy
-the application to some virtualization platform, and monitor its lifecycle, then
-they can find out how all that fits together across the relevant codebases We'll
-be leaning into comprehensive documentation pretty heavily, to make this
-traversal easier. And if you can't find specifically what you're looking for,
-ask us! Like we said above, everything we do is 100% public.
+matures. The dream is that if someone ever wants to see how to hook up my
+company's source code management to a CI/CD pipeline, have it fetch its secrets,
+deploy the application to some virtualization platform, and monitor its
+lifecycle, then they can find out how all that fits together across the relevant
+codebases across OpenSourceCorp. We'll be leaning into comprehensive
+documentation pretty heavily, to make this traversal easier. And if you can't
+find specifically what you're looking for, ask us! Like we said above,
+everything we do is 100% public.
 
 Someday, we even hope to have *other* open-source projects do work on our
 platforms, run their tests on our CI/CD deployment, and deploy their public
@@ -107,7 +108,7 @@ opinions and vision shaping the content. Our strength will come from the
 collaboration of our peers, and the more of those peers we can bring on board to
 help realize our shared vision, the better. So if you're interested in working
 towards this shared vision of a more open tech world, have something to
-contribute to the project, or just want to learn more, we want to hear from YOU!
+contribute to the project, or just want to learn more, we want to hear from you!
 
 So keep an eye out for future developments from us, and we hope to see you all
 around the office! ;)
