@@ -79,7 +79,7 @@ So... wait, what's actually going on, here, then?
 What you can expect us to be working on here at OpenSourceCorp is... well, lots
 of stuff! The groundwork will be platform solutions like an [image builder
 framework](https://github.com/opensourcecorp/ymir), [deployment tooling for our
-CI/CD](https://github.com/opensourcecorp/brah) and
+CI/CD](https://github.com/opensourcecorp/gnar) and
 [SCM](https://github.com/opensourcecorp/soup) systems, and others. Once we have
 some platforms in place, we'll start to deploy *actual* software onto those
 platforms, integrating them into the broader OSC ecosystem as it grows and
