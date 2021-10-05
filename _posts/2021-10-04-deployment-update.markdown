@@ -7,10 +7,11 @@ author: Ryan J. Price
 ---
 
 [OpenSourceCorp](https://github.com/opensourcecorp/opensourcecorp) (OSC)
-development has slowed down in recent months as Ryan (founder & maintainer) has
-gotten caught up in *work*-work. However, with renewed motivation (looming
-conference talk at [SaltConf21](https://saltconf.com/), *presenting on OSC!*),
-we're back at it again!
+development has slowed down in recent months as
+[Ryan](https://github.com/ryapric) (founder & maintainer) has gotten caught up
+in *work*-work. However, with renewed motivation (looming conference talk at
+[SaltConf21](https://saltconf.com/), *presenting on OSC!*), we're back at it
+again!
 
 One of the chief goals of OSC has been to have its services live on an
 as-unmanaged-as-possible platform, in the service of helping to teach the
