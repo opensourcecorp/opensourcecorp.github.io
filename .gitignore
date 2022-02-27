@@ -3,3 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# UPDATES.md is just a local notes file for what to include in upcoming posts
+UPDATES.md
