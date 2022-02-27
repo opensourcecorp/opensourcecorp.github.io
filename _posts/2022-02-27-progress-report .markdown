@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Progress Report 2022-01-02"
-date:   2022-02-27 16:30:00 -0600
+title:  "Progress Report 2022-02-27"
+date:   2022-02-27 12:00:00 -0600
 # categories: jekyll update
 author: Ryan J. Price
 ---
