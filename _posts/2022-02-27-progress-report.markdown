@@ -9,8 +9,8 @@ author: Ryan J. Price
 More radio silence as ever more work has been done across OSC. As you'll see
 from the list below though, this is a really big set of changes/new stuff!
 
-* The conflation of infrastrcture repos with application repos has grown to be a
-  potential source of confusion for readers. As such, OSC should shortly be
+* The conflation of infrastructure repos with application repos has grown to be
+  a potential source of confusion for readers. As such, OSC should shortly be
   moving from a mono-org source, to orgs separated by identifier
   (`opensourcecorp-infra`, `opensourcecorp-apps`, etc). This should make it more
   clear what type of repo you're looking at when you're browsing a certain org.
@@ -49,7 +49,7 @@ from the list below though, this is a really big set of changes/new stuff!
   gets fixed.
 
 * `rhad` now runs the [Black](https://github.com/psf/black) formatter check for
-  Python.
+  Python code.
 
 * Fixed a bug in `rhad` that made it exit on the first error in some linter
   runs. It will now run in its entirety before exiting.
@@ -64,10 +64,9 @@ from the list below though, this is a really big set of changes/new stuff!
   Harbor), as well as the other features that GitLab provides.
 
 * [`scrawl`](https://github.com/opensourcecorp/scrawl) is a new app -- it's a
-* simple note-taker that supports tag search.
-  Lots of stuff planned for it, while keeping it super simple & lightweight.
-  Stay tuned.
+  simple note-taker that supports tag search. Lots of stuff planned for it,
+  while keeping it super simple & lightweight. Stay tuned.
 
 The above is mostly a collective brain dump of what's been being worked on
-acros OSC, with more to come all the time. So as always, stay tuned for
+across OSC, with more to come all the time. So as always, stay tuned for
 continued updates as we build out the rest of the platform!
