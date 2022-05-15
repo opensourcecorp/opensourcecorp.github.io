@@ -39,7 +39,11 @@ impactful updates nonetheless!
   stack locally at this time should consume around 12GB of free memory, and this
   is unrealistic for most host systems. So, the bootstrapper currently defaults
   to *building* all subsystems, but only *running* the core three (`aether`,
-  `faro`, and `chonk`).
+  `faro`, and `chonk`). To run others, export the `OSC_SUBSYSTEMS` var as a
+  comma-separated string of subsystem names, e.g.:
+  
+      $ export OSC_SUBSYSTEMS=photobook,gnar
+      $ ./bootstrap.sh local-vm up
 
 * I had previously gotten a working deployment of [Harbor](https://goharbor.io/)
   to serve as the OCI image registry for OSC infra. Harbor is now gone, and
