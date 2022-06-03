@@ -1,6 +1,6 @@
 # OSC website
 
-The published OpenSourceCorp website content cane be found on [OSC's website
+The published OpenSourceCorp website content can be found on [OSC's website
 itself](https://opensourcecorp.org).
 
 This repo accepts no PRs or changes -- It only serves as a GitHub Pages
