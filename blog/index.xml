@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenSourceCorp Blog on OpenSourceCorp</title>
+    <link>https://opensourcecorp.org/blog/</link>
+    <description>Recent content in OpenSourceCorp Blog on OpenSourceCorp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jun 2022 21:17:46 -0500</lastBuildDate><atom:link href="https://opensourcecorp.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Progress Report 2022-05-15</title>
+      <link>https://opensourcecorp.org/blog/posts/2022-05-15-progress-report/</link>
+      <pubDate>Sun, 15 May 2022 12:00:00 -0600</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2022-05-15-progress-report/</guid>
+      <description>(Checks date of last post, sweats profusely)
+Not a ton of changes in this update, I&amp;rsquo;ve had a lot of things come up these past few months that have prioritized my attention (a few conference talks to prepare for, dog &amp;amp; personal health issues, house repairs, work-work, etc). But some impactful updates nonetheless!
+All OSC infrastructure repos have now been consolidated into a single monorepo, osc-infra. This implies that you should expect old links to the individual infra repos to be broken.</description>
+    </item>
+    
+    <item>
+      <title>Progress Report 2022-02-27</title>
+      <link>https://opensourcecorp.org/blog/posts/2022-02-27-progress-report/</link>
+      <pubDate>Sun, 27 Feb 2022 12:00:00 -0600</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2022-02-27-progress-report/</guid>
+      <description>More radio silence as ever more work has been done across OSC. As you&amp;rsquo;ll see from the list below though, this is a really big set of changes/new stuff!
+The conflation of infrastructure repos with application repos has grown to be a potential source of confusion for readers. As such, OSC should shortly be moving from a mono-org source, to orgs separated by identifier (opensourcecorp-infra, opensourcecorp-apps, etc). This should make it more clear what type of repo you&amp;rsquo;re looking at when you&amp;rsquo;re browsing a certain org.</description>
+    </item>
+    
+    <item>
+      <title>Progress Report 2022-01-02</title>
+      <link>https://opensourcecorp.org/blog/posts/2022-01-02-progress-report/</link>
+      <pubDate>Sun, 02 Jan 2022 19:30:00 -0500</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2022-01-02-progress-report/</guid>
+      <description>Happy New Year!
+Over the holiday season, I&amp;rsquo;ve had about a week of dedicated time to do a lot of net-new work for OSC, as well as to go back and do some much-needed cleanup &amp;amp; consolidation across several of the core codebases.
+First &amp;amp; foremost, we&amp;rsquo;ve now got a working OCI image registry! gnar needs one for custom images, so it turned into a priority pretty quick. The registry is called photobook, which is our implementation of the Harbor registry software.</description>
+    </item>
+    
+    <item>
+      <title>OSC local bootstrapper available</title>
+      <link>https://opensourcecorp.org/blog/posts/2021-12-11-local-bootstrapper-available/</link>
+      <pubDate>Sat, 11 Dec 2021 16:00:00 -0500</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2021-12-11-local-bootstrapper-available/</guid>
+      <description>OpenSourceCorp (OSC) development continues to chug along. Below are some of the updates we&amp;rsquo;ve been hard at work on, when time presents itself.
+One of the net-new things we&amp;rsquo;ve worked on recently is the introduction of a (working) service-discovery implementation via HashiCorp Consul (named &amp;ldquo;faro&amp;rdquo;, which means &amp;ldquo;lighthouse&amp;rdquo; in a few Latin-root languages). Updates to aether allow for each platform/app to easily register themselves with the Consul cluster, and be discoverable via clean domain names and not IP addresses anymore, with two foundational exceptions that still need known IPs at their first launch (faro itself, and aether).</description>
+    </item>
+    
+    <item>
+      <title>OSC updates: hosting decision &amp; live services!</title>
+      <link>https://opensourcecorp.org/blog/posts/2021-10-04-deployment-update/</link>
+      <pubDate>Mon, 04 Oct 2021 21:15:00 -0500</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2021-10-04-deployment-update/</guid>
+      <description>OpenSourceCorp (OSC) development has slowed down in recent months as Ryan (founder &amp;amp; maintainer) has gotten caught up in work-work. However, with renewed motivation (looming conference talk at SaltConf21, presenting on OSC!), we&amp;rsquo;re back at it again!
+One of the chief goals of OSC has been to have its services live on an as-unmanaged-as-possible platform, in the service of helping to teach the community all about the core functionality of computing, storage, networking, and security.</description>
+    </item>
+    
+    <item>
+      <title>New architecture diagram!</title>
+      <link>https://opensourcecorp.org/blog/posts/2021-07-25-new-arch-diagram/</link>
+      <pubDate>Sun, 25 Jul 2021 20:00:00 -0600</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2021-07-25-new-arch-diagram/</guid>
+      <description>OpenSourceCorp&amp;rsquo;s home repo has a new architecture diagram up! This diagram provides a high-level layout of the architecural flows for the current &amp;amp; future core OpenSourceCorp platforms. It&amp;rsquo;s pretty rough at the time of this posting, but I&amp;rsquo;m not exactly a designer :)
+If you peruse the various repos across OSC, you&amp;rsquo;ll notice that most are still empty placeholders, not-yet-functional, or still need some serious work &amp;ndash; but many have continued to receive updates to their codebases (still just me over here!</description>
+    </item>
+    
+    <item>
+      <title>Announcing OpenSourceCorp!</title>
+      <link>https://opensourcecorp.org/blog/posts/2021-07-05-announcing-opensourcecorp/</link>
+      <pubDate>Mon, 05 Jul 2021 23:50:00 -0500</pubDate>
+      
+      <guid>https://opensourcecorp.org/blog/posts/2021-07-05-announcing-opensourcecorp/</guid>
+      <description>Today, I&amp;rsquo;m very excited to finally announce the public launch of OpenSourceCorp &amp;ndash; the free and open-source enterprise. This is something I&amp;rsquo;ve been working towards for a few months now, and while it&amp;rsquo;s been public the entire time, it&amp;rsquo;s finally in a spot worth sharing with the rest of the world.
+My contributions to the open-source community all started with an ndJSON logging framework for R that I wrote at work, to solve a very specific set of challenges I was having.</description>
+    </item>
+    
+  </channel>
+</rss>

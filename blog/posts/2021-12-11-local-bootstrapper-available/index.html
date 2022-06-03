@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/wiki/index.html">Wiki</a></li>
+    <li><a href="https://opensourcecorp.org">Source Code</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>OSC local bootstrapper available</h2>
+  <p><a href="https://github.com/opensourcecorp/opensourcecorp">OpenSourceCorp</a> (OSC)
+development continues to chug along. Below are some of the updates we&rsquo;ve been
+hard at work on, when time presents itself.</p>
+<p>One of the net-new things we&rsquo;ve worked on recently is the introduction of a
+(working) service-discovery implementation via <a href="https://www.consul.io">HashiCorp
+Consul</a> (named
+&ldquo;<a href="https://github.com/opensourcecorp/faro">faro</a>&rdquo;, which means &ldquo;lighthouse&rdquo; in a
+few Latin-root languages). Updates to
+<a href="https://github.com/opensourcecorp/aether">aether</a> allow for each platform/app
+to easily register themselves with the Consul cluster, and be discoverable via
+clean domain names and not IP addresses anymore, with two foundational
+exceptions that still need known IPs at their first launch (<code>faro</code> itself, and
+<code>aether</code>). We took out a lot of manual IP pointing with this change, and it
+feels <em>awesome!</em></p>
+<p>The other major news is that we&rsquo;ve been developing a local infrastructure
+bootstrapper on &amp; off for some time now, and it&rsquo;s finally in a state that should
+work for others! Using all of the regular OSC local-workstation dev tools, the
+utility builds the VM images, starts them up in order, runs some sanity checks
+on the cluster, and then the user can poke around to learn more about how the
+OSC infrastructure works together, is extended upon, etc.</p>
+<p><em><strong>We would really appreciate the community taking the time to test it out</strong></em>.
+Ryan Price (founder/maintainer of OSC) works off of a native Linux development
+environment, and so there&rsquo;s been no testing of the bootstrapper done against
+macOS or Windows (the latter is sure to be hacky). The goal of OSC is for all
+dev work to be done on a Linux-based OS in the first place for consistency, but
+we recognize that not everyone has a high-powered Linux dev machine to use to
+reap the fruits of all this labor <code>:)</code></p>
+<p><a href="https://github.com/opensourcecorp/osc-infra-bootstrap">The bootstrapper is available
+here</a>, with instructions
+for use in the <code>README</code>. For any questions, suggestions, or comments, please
+reach out, open a Github PR/Issue, etc!</p>
+
+
+    </div></body>
+</html>

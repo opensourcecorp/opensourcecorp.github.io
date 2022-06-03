@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/wiki/index.html">Wiki</a></li>
+    <li><a href="https://opensourcecorp.org">Source Code</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>Announcing OpenSourceCorp!</h2>
+  <p>Today, I&rsquo;m very excited to finally announce the public launch of
+<a href="https://github.com/opensourcecorp">OpenSourceCorp</a> &ndash; the free and open-source
+enterprise. This is something I&rsquo;ve been working towards for a few months now,
+and while it&rsquo;s been public the entire time, it&rsquo;s finally in a spot worth sharing
+with the rest of the world.</p>
+<p>My contributions to the open-source community all started with <a href="https://github.com/ryapric/loggit">an ndJSON
+logging framework for R</a> that I wrote at
+work, to solve a very specific set of challenges I was having. I figured that
+even if the tool itself wasn&rsquo;t useful to anyone but me, then at least the
+codebase could be helpful to look through as an example of how a simple R
+package should be designed, since I was reading out of <a href="https://r-pkgs.org/">the book on the
+subject</a>.</p>
+<p>Since then, I&rsquo;ve been involved in <a href="https://github.com/ryapric">various open-source
+activities</a> over the past several years, from your
+typical <a href="https://github.com/ryapric?tab=repositories">mountain of mishmash
+repos</a>, to minor contributions to
+larger open-source projects (wow this summary is hard to find a GH link for), to
+<a href="https://github.com/ops-utils">less-personalized side projects</a> intended for
+larger community engagement, and <a href="https://github.com/ryapric/talks">talks that I&rsquo;ve
+given</a> to the various communities in which I
+work. Those communities now span a pretty wide range of programming languages,
+software &amp; data platforms, automation solutions, and more. I&rsquo;m incredibly
+grateful for all of the learning opportunities I have had to embrace such a
+range of experiences, and have grown to appreciate really quality learning
+content for skills like that.</p>
+<p>Most of my public work has been in pursuit of sharing knowledge, as it had been
+shared with me as I was learning these various tools, technologies, coding
+styles, etc. But a career in consulting for different, diverse companies has led
+me to a realization: you can read all the docs, and run through all the
+tutorials &amp; workshops in the world, and you <em>still</em> might not be able to
+actually <em><strong>do the f@ckin&rsquo; thing</strong></em> in &ldquo;real life&rdquo;. Maybe you&rsquo;ll be an &ldquo;expert&rdquo;
+on all the ins, outs, and edge behaviors of some complex tool or programming
+language, but when it comes time to put your skills into a production
+environment, you might end up&hellip; stranded.</p>
+<blockquote>
+<p>Wtf is this &lsquo;corporate reverse proxy&rsquo; I have to register with? And what&rsquo;s this
+&lsquo;Vault&rsquo; thing where I&rsquo;m supposed to store passwords in? And what do you MEAN I
+can&rsquo;t pull this public image and <code>kubectl apply</code> my sweet Kubernetes manifest to
+the prod cluster?!&quot;</p>
+</blockquote>
+<p>(You can read more (and growing) motivation for the &ldquo;why&rsquo;s&rdquo; in <a href="https://github.com/opensourcecorp/opensourcecorp">OpenSourceCorp&rsquo;s
+main repo</a>)</p>
+<p>So much of this &ldquo;how do I actually do this&rdquo; knowledge is gated behind employers&rsquo;
+walls. Which is to be expected; companies don&rsquo;t want to share what they&rsquo;ve got
+going on internally, whether that&rsquo;s to protect data, trade secrets, operational
+advantages, etc. But this means that if someone wants to learn a certain (or
+alternative) way to architect or design something at work, they have fewer and
+less-available resources with which to engage.</p>
+<p>To be clear, this is not a plea for software maintainers to broaden their
+documentation&rsquo;s scope so much that these kinds of things are covered &ndash; you&rsquo;d
+never catch all the use cases! But ultimately, tool &amp; language documentation
+alone inevitably will leave hope for enterprise integration wanting.</p>
+<p><em><strong>This</strong></em> is the ultimate motivation for OpenSourceCorp: to be a place where
+developers, engineers, sysadmins, designers, and all the other walks of
+work-life can work together to deliver real enterprise solutions. Knowledge is
+power, and our mission is to bring more of this power to our industry &ndash; a
+mission we pursue with one simple, unwavering promise: to do <em><strong>every bit of our
+work 100% in the open</strong></em>. Development, discussion, hosting, and anything else
+(that respects the privacy or personal security of our people) will be fully
+visible to anyone in the world.</p>
+<h2 id="so-wait-whats-actually-going-on-here-then">So&hellip; wait, what&rsquo;s actually going on, here, then?</h2>
+<p>What you can expect us to be working on here at OpenSourceCorp is&hellip; well, lots
+of stuff! The groundwork will be platform solutions like an <a href="https://github.com/opensourcecorp/ymir">image builder
+framework</a>, <a href="https://github.com/opensourcecorp/gnar">deployment tooling for our
+CI/CD</a> and
+<a href="https://github.com/opensourcecorp/sauce">SCM</a> systems, and others. Once we have
+some platforms in place, we&rsquo;ll start to deploy <em>actual</em> software onto those
+platforms, integrating them into the broader OSC ecosystem as it grows and
+matures. The dream is that if someone ever wants to see how to hook up my
+company&rsquo;s source code management to a CI/CD pipeline, have it fetch its secrets,
+deploy the application to some virtualization platform, and monitor its
+lifecycle, then they can find out how all that fits together across the relevant
+codebases across OpenSourceCorp. We&rsquo;ll be leaning into comprehensive
+documentation pretty heavily, to make this traversal easier. And if you can&rsquo;t
+find specifically what you&rsquo;re looking for, ask us! Like we said above,
+everything we do is 100% public.</p>
+<p>Someday, we even hope to have <em>other</em> open-source projects do work on our
+platforms, run their tests on our CI/CD deployment, and deploy their public
+content to our infrastructure solutions. We hope to have others work with us
+across oceans of target audiences to help share in a common vision to make the
+hardware/software industry a better place for everyone. But, one step at a time
+:)</p>
+<h2 id="one-final-thing">One final thing&hellip;</h2>
+<p>We need help from YOU! We&rsquo;re &ldquo;hiring&rdquo;, so to speak. OpenSourceCorp cannot
+realize its vision in a vacuum/echo chamber, because then it&rsquo;s just one person&rsquo;s
+opinions and vision shaping the content. Our strength will come from the
+collaboration of our peers, and the more of those peers we can bring on board to
+help realize our shared vision, the better. So if you&rsquo;re interested in working
+towards this shared vision of a more open tech world, have something to
+contribute to the project, or just want to learn more, we want to hear from you!</p>
+<p>So keep an eye out for future developments from us, and we hope to see you all
+around the office! ;)</p>
+
+
+    </div></body>
+</html>

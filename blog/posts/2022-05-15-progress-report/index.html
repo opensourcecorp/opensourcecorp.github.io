@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/wiki/index.html">Wiki</a></li>
+    <li><a href="https://opensourcecorp.org">Source Code</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>Progress Report 2022-05-15</h2>
+  <p>(<em>Checks date of last post, sweats profusely</em>)</p>
+<p>Not a ton of changes in this update, I&rsquo;ve had a lot of things come up these past
+few months that have prioritized my attention (a few conference talks to prepare
+for, dog &amp; personal health issues, house repairs, work-work, etc). But some
+impactful updates nonetheless!</p>
+<ul>
+<li>
+<p>All OSC infrastructure repos have now been consolidated into a single
+monorepo, <a href="https://github.com/opensourcecorp/osc-infra"><code>osc-infra</code></a>. This
+implies that you should expect old links to the individual infra repos to be
+broken.</p>
+<p>OSC applications themselves (like <code>ghostwriter</code>) will still live in top-level
+repos for now, until I decide otherwise &ndash; I&rsquo;d <em>like</em> to have an <code>osc-apps</code>
+monorepo as well, but still need to tackle that with a more academic approach
+with respect to versioning, release, etc. This will probably be a custom-built
+toolset and <em>not</em> something like <a href="https://bazel.build/">Bazel</a>; though we can
+probably learn a lot from some parts of that tool.</p>
+</li>
+<li>
+<p>Each infra component has historically been referred to as &ldquo;apps&rdquo; throughout
+the source code. To better represent what these components actually do, they
+will now be referred to as &ldquo;subsystems&rdquo;. <code>osc-infra</code> docs and most of its code
+should currently reflect that, but I will likely need to update more code as
+well. So, if you see any straggling references to an infra component referred
+to as &ldquo;app&rdquo;/&ldquo;app_name&rdquo;, know that this means &ldquo;subsystem&rdquo; in the new
+vocabulary.</p>
+</li>
+<li>
+<p>The <code>osc-infra</code> bootstrapper (now a subdir of that repo) now supports another
+env var, <code>$OSC_SUBSYSTEMS</code>, that allows safer control over locally-deployed
+VMs with respect to their aggregate memory usage. Deploying the entire infra
+stack locally at this time should consume around 12GB of free memory, and this
+is unrealistic for most host systems. So, the bootstrapper currently defaults
+to <em>building</em> all subsystems, but only <em>running</em> the core three (<code>aether</code>,
+<code>faro</code>, and <code>chonk</code>). To run others, export the <code>OSC_SUBSYSTEMS</code> var as a
+comma-separated string of subsystem names, e.g.:</p>
+<pre><code>$ export OSC_SUBSYSTEMS=photobook,gnar
+$ ./bootstrap.sh local-vm up
+</code></pre>
+</li>
+<li>
+<p>I had previously gotten a working deployment of <a href="https://goharbor.io/">Harbor</a>
+to serve as the OCI image registry for OSC infra. Harbor is now gone, and
+replaced with the <a href="https://docs.docker.com/registry/">Docker Registry server</a>
+instead. Harbor&rsquo;s HTTP API was poorly-documented, and poorly-implemented, in
+my not-so-humble opinion &ndash; plus the setup using its bundled installer is too
+opaque for my liking, and goes against the principles of OSC as a learning
+utility. I find the Docker Registry server by comparison to be way simpler to
+deploy &amp; to understand, for me &amp; others alike.</p>
+</li>
+<li>
+<p>To serve many different, relevant use cases, I have waffled back &amp; forth on
+whether to use <a href="https://gitlab.com">GitLab</a> or not. GitLab provides many
+consolidated features that are of excellent quality &amp; diversity &ndash; source code
+management, a CI/CD system, an OCI image registry, an artifact store, and
+more. It&rsquo;s a great tool.</p>
+<p>However, I have ultimately decided against using GitLab for OSC. Perhaps the
+primary reason being that with so many features tied to a single platform, I
+am worried that the modularity is far too limited to allow for
+individualization of OSC subsystems.</p>
+<p>So, OSC infra will stick with the original plan of having fully-modular
+subsystems instead of the consolidated features that GitLab provides:</p>
+<ul>
+<li><a href="https://gitea.io">Gitea</a> as the SCM, as originally planned</li>
+<li>Docker Registry server as OCI image store, and <a href="https://github.com/Joxit/docker-registry-ui">an unofficial registry
+UI</a> as a companion service (the
+latter is WIP)</li>
+<li><a href="concourse-ci.org/">Concourse</a> will remain as the CI/CD subsystem</li>
+<li>A generic artifact store is still up for decision &ndash; other options I&rsquo;ve come
+across aren&rsquo;t&hellip; well, aren&rsquo;t that great, or aren&rsquo;t free (or both)</li>
+</ul>
+</li>
+<li>
+<p>Unrelated directly to OSC, but my host PC now runs Debian instead of Manjaro
+Linux. In the past, some discrepancies between host tooling, versions, and
+package names has made it difficult to jump between development machines'
+operating systems, etc. This host change will hopefully leading to a more
+consistent developer experience between hosts, and between hosts &amp; deployments
+(since all infra subsystems run on Debian Stable).</p>
+</li>
+</ul>
+<p>There are surely some more minor notes to add somewhere, but the <code>osc-infra</code>
+consolidation took away the VCS history of the individual infra repos &ndash; and
+naturally I didn&rsquo;t comb through their logs before deleting them. But overall,
+the monorepo consolidation has already led to a lot of codebase &amp; development
+benefits that I&rsquo;d hoped to see, and I look forward to seeing this tooling
+continue to mature!</p>
+
+
+    </div></body>
+</html>

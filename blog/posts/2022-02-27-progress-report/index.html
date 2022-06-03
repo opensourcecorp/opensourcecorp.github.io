@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/wiki/index.html">Wiki</a></li>
+    <li><a href="https://opensourcecorp.org">Source Code</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>Progress Report 2022-02-27</h2>
+  <p>More radio silence as ever more work has been done across OSC. As you&rsquo;ll see
+from the list below though, this is a really big set of changes/new stuff!</p>
+<ul>
+<li>
+<p>The conflation of infrastructure repos with application repos has grown to be
+a potential source of confusion for readers. As such, OSC should shortly be
+moving from a mono-org source, to orgs separated by identifier
+(<code>opensourcecorp-infra</code>, <code>opensourcecorp-apps</code>, etc). This should make it more
+clear what type of repo you&rsquo;re looking at when you&rsquo;re browsing a certain org.</p>
+</li>
+<li>
+<p>All infra services across OSC now use internal HTTPS / TLS &ndash; OSC itself
+behaves as a root CA, its root CA pubkey is in the system cert store of each
+service, and each service signs its own intermediate TLS certificates using
+that root CA key. Public-facing services will eventually use LetsEncrypt in
+addition, but we&rsquo;re not there yet since we have no public-facing services.</p>
+</li>
+<li>
+<p><a href="https://github.com/opensourcecorp/chonk"><code>chonk</code></a> Postgres is now configured
+for TLS connections, and requires all clients to specify some manner of TLS in
+their connection config. Verification method is up to the client, since some
+are much more difficult to <code>verify-full</code> (namely,
+<a href="https://github.com/opensourcecorp/photobook"><code>photobook</code></a> because of the
+finnicky nature of its cert mounts, but there will undoubtedly be others).</p>
+</li>
+<li>
+<p><code>chonk</code> Postgres now has synchronous replication configured successfully.</p>
+</li>
+<li>
+<p><code>chonk</code>&rsquo;s Vagrantfile now optionally mounts a persistent data dir that runs a
+backup &amp; restore during shutdown &amp; startup, respectively. It&rsquo;s not working
+exactly as intended just yet, but the code is there to tweak in the future.</p>
+</li>
+<li>
+<p><code>chonk</code> now includes a <a href="https://redis.io"><code>redis</code></a> server, secured with TLS
+and (currently blanket) password auth. Some infra services require a <code>redis</code>
+server, and most even bring their own embedded &ndash; but that&rsquo;s not something we
+want to do, and so rolling our own will allow for consistency in expectation
+of &ldquo;where does this data live/go&rdquo;. Replication for the <code>redis</code> server will be
+coming soon as well.</p>
+</li>
+<li>
+<p><a href="https://github.com/opensourcecorp/rhadamanthus"><code>rhad</code></a> is now on the GitHub
+Container Registry, and apps use <code>rhad</code> in their own GHA pipelines, just like
+they will within <a href="https://github.com/opensourcecorp/gnar"><code>gnar</code></a>. However,
+the GHA container build stage recently started to fail seemingly without any
+code changes (some kind of auth issue), so the image is outdated until that
+gets fixed.</p>
+</li>
+<li>
+<p><code>rhad</code> now runs the <a href="https://github.com/psf/black">Black</a> formatter check for
+Python code.</p>
+</li>
+<li>
+<p>Fixed a bug in <code>rhad</code> that made it exit on the first error in some linter
+runs. It will now run in its entirety before exiting.</p>
+</li>
+<li>
+<p><a href="https://github.com/opensourcecorp/sauce"><code>sauce</code></a> (source code management)
+is&hellip; not MVP yet. I wanted to go with <a href="https://gitea.io">Gitea</a>, which is a
+great option, and even had a working deployment for it. But as other
+components across OSC were being explored (artifact repository, container
+image registry, etc.), <a href="https://gitlab.com">GitLab</a> started to make more &amp;
+more sense. I&rsquo;ll be getting an instance of that up &amp; working relatively soon.
+<code>sauce</code> will take over <code>photobook</code>&rsquo;s functionality (I really don&rsquo;t like
+Harbor), as well as the other features that GitLab provides.</p>
+</li>
+<li>
+<p><a href="https://github.com/opensourcecorp/scrawl"><code>scrawl</code></a> is a new app &ndash; it&rsquo;s a
+simple note-taker that supports tag search. Lots of stuff planned for it,
+while keeping it super simple &amp; lightweight. Stay tuned.</p>
+</li>
+</ul>
+<p>The above is mostly a collective brain dump of what&rsquo;s been being worked on
+across OSC, with more to come all the time. So as always, stay tuned for
+continued updates as we build out the rest of the platform!</p>
+
+
+    </div></body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/wiki/index.html">Wiki</a></li>
+    <li><a href="https://opensourcecorp.org">Source Code</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>Progress Report 2022-01-02</h2>
+  <p>Happy New Year!</p>
+<p>Over the holiday season, I&rsquo;ve had about a week of dedicated time to do a lot of
+net-new work for OSC, as well as to go back and do some much-needed cleanup
+&amp; consolidation across several of the core codebases.</p>
+<p>First &amp; foremost, we&rsquo;ve now got a working OCI image registry!
+<a href="https://github.com/opensourcecorp/gnar"><code>gnar</code></a> needs one for custom images, so
+it turned into a priority pretty quick. The registry is called
+<a href="https://github.com/opensourcecorp/photobook"><code>photobook</code></a>, which is our
+implementation of the <a href="https://goharbor.io">Harbor registry</a> software. Getting
+Harbor up &amp; running was more of a challenge than I expected &ndash; it&rsquo;s
+documentation isn&rsquo;t as robust as I&rsquo;d have liked to see, particularly its HTTP
+API docs (you can only browse said docs on a running instance of Harbor). I
+really needed the API docs because there are several things <code>photobook</code> needs to
+do at build time: set up a Docker Hub mirror, set up replication jobs for common
+base images from said mirror, and surely more administrative tasks in the future
+(like building some OSC images so they&rsquo;re available at boot time). I managed to
+cobble together what I could from the docs, and my own trial &amp; error, but it&rsquo;s
+become a bit of an ugly set of repeated <code>curl</code> calls in the
+<a href="https://github.com/opensourcecorp/aether"><code>aether</code></a> code for <code>photobook</code>.
+Something for us to work on in the future might be making a Harbor client
+library &ndash; but, we&rsquo;ll see how much more complex the build-time config grows to
+be first, I think.</p>
+<p>However, Harbor was chosen <em>because</em> of its broad set of features as touched on
+above, so it was developer time I was willing to spend, and maintenance I&rsquo;m
+willing to keep up with.</p>
+<p>The second major update (and much more invisibly impactful, IMHO) is that all
+OSC images will now pull &amp; store common scripts from the
+<a href="https://github.com/opensourcecorp/ymir"><code>ymir</code></a> codebase at build time. This
+means that <em>any</em> repos using OSC&rsquo;s image-build toolchain now need to bring much
+less of their own config for builds &amp; boots &ndash; much has now been abstracted to
+<code>ymir</code>&rsquo;s <code>scripts/{build,run}/</code> directories. <code>ymir</code> ended up being a great
+location to house common build &amp; runtime logic (outside of <code>aether</code>) because
+image builds happen within the <code>ymir</code> codebase anyway, so anything stored there
+is already available for use.</p>
+<p>Additionally, those common config scripts now ensure that <code>aether</code> minion IDs
+are automatically suffixed with a random hex string. This allows for scaled
+services without conflicting IDs or private keys, which has been a major issue
+until now unless every single build-time job provided their own randomized
+suffix. The last reamining duplicate-ID pain point is that <code>gnar</code> workers
+provide their node IDs to the web server via their hostnames &ndash; which means that
+<code>n</code> number of worker nodes will all show up as distinct workers in the cluster,
+but as a <em>single hostname</em> in the <code>fly</code> CLI. This isn&rsquo;t a difficult fix, but
+it&rsquo;s not one we&rsquo;ve broached just yet, since local testing just uses a single
+worker node.</p>
+<p>And the final uppublishdate: we&rsquo;ve managed to secure a domain!</p>
+<p><a href="https://opensourcecorp.org">opensourcecorp.org</a> is where we&rsquo;ll eventually be
+building out site content for the project at large. As of today, it just
+redirects the DNS query to the project Github page, but be on the lookout for
+when we start adding records to point to subdomains. <em><strong>However</strong></em>, paths <em>do</em>
+get forwarded on that redirect, so e.g. <code>opensourcecorp.org/ymir</code> sends you
+straight to <code>github.com/opensourcecorp/ymir</code>! That&rsquo;s pretty neat for the time
+being!</p>
+<p>All in all, there&rsquo;s been a lot of great progress this past week or two at OSC,
+and I&rsquo;m SUPER excited about what 2022 will bring. I&rsquo;m looking forward to getting
+the community more involved in the work OSC wants to do, to explore other
+use-cases that we can come up with, and to work to make even more cool stuff.
+See you in the new year!</p>
+
+
+    </div></body>
+</html>
