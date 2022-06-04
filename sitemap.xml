@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://opensourcecorp.org/</loc>
+    <loc>https://www.opensourcecorp.org/</loc>
     <lastmod>2022-06-01T21:17:46-05:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/</loc>
+    <loc>https://www.opensourcecorp.org/blog/</loc>
     <lastmod>2022-06-01T21:17:46-05:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2022-05-15-progress-report/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2022-05-15-progress-report/</loc>
     <lastmod>2022-05-15T12:00:00-06:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2022-02-27-progress-report/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2022-02-27-progress-report/</loc>
     <lastmod>2022-02-27T12:00:00-06:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2022-01-02-progress-report/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2022-01-02-progress-report/</loc>
     <lastmod>2022-01-02T19:30:00-05:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2021-12-11-local-bootstrapper-available/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2021-12-11-local-bootstrapper-available/</loc>
     <lastmod>2021-12-11T16:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2021-10-04-deployment-update/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2021-10-04-deployment-update/</loc>
     <lastmod>2021-10-04T21:15:00-05:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2021-07-25-new-arch-diagram/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2021-07-25-new-arch-diagram/</loc>
     <lastmod>2021-07-25T20:00:00-06:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/blog/posts/2021-07-05-announcing-opensourcecorp/</loc>
+    <loc>https://www.opensourcecorp.org/blog/posts/2021-07-05-announcing-opensourcecorp/</loc>
     <lastmod>2021-07-05T23:50:00-05:00</lastmod>
   </url><url>
-    <loc>https://opensourcecorp.org/categories/</loc>
+    <loc>https://www.opensourcecorp.org/categories/</loc>
   </url><url>
-    <loc>https://opensourcecorp.org/tags/</loc>
+    <loc>https://www.opensourcecorp.org/tags/</loc>
   </url>
 </urlset>
