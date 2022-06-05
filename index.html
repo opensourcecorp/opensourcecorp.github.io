@@ -16,14 +16,68 @@
     <li><a href="/index.html">Home</a></li>
     <li><a href="/blog/index.html">Blog</a></li>
     
-    <li><a href="https://github.com/opensourcecorp">Source Code</a></li>
+    <li><a href="https://github.com/opensourcecorp">OSC Source Code</a></li>
   </ul>
 </div>
 <div id="content" class="content">
-      <h2>OpenSourceCorp - The Open-Source Enterprise</h2>
-      <p><em><strong>Welcome to OpenSourceCorp!</strong></em></p>
-<p>Pardon our construction &ndash; we&rsquo;re still building out the site overall. In the
-meantime, check out our <a href="/blog/">blog posts</a>!</p>
+      <h2>OpenSourceCorp - the free and open-source enterprise</h2>
+      <hr>
+<p>Here at OpenSourceCorp, we strive to provide an opinionated perspective on how
+software systems work &ldquo;in real life&rdquo;. We don&rsquo;t have some grand monetization
+vision for ourselves, nor do we propose anything particularly novel in <em>what</em> we
+do. What we do is collaborate to write application code that runs on
+infrastructure deployed via CI/CD pipelines, secured via applicable industry
+best-practices, and supported by comprehensive documentation.</p>
+<p>The novel component that we provide is that we do all of this work <em><strong>100% in
+the open</strong></em>.</p>
+<p>We do this because we have developed a general frustration with <em><strong>how</strong></em> modern
+teams are expected to learn different things &ndash; especially how so many tools,
+technologies, and processes are used in concert with each other in a broader
+enterprise ecosystem. There are plenty of tutorials and &ldquo;getting started&rdquo; guides
+for any number of tools or topics, but while several of these have supplements
+for their use in a larger ecosystem, they&rsquo;ve never feel like quite enough to
+document the holistic lifecycle of a use case. The most valuable learning
+material for <em>real</em> use cases happens within company walls with propietary
+software &ndash; where if you&rsquo;re not an employee, you don&rsquo;t get to learn.</p>
+<p>Take any given, relatively-complex software, like <a href="https://kafka.apache.org/">Apache
+Kafka</a> or <a href="https://www.vaultproject.io/docs">HashiCorp
+Vault</a>. Their respective documentation portals
+are very comprehensive, and provide a wealth of use cases, simple &amp; complex
+configurations, and more.</p>
+<p>But what if you&rsquo;re self-hosting a production-quality cluster at your company?
+How do you <em>actually</em> deploy that cluster, and not rely on manually launching it
+via the (usually very good) installation instructions? Do you bootstrap some EC2
+machines in a CloudFormation template for an AWS deployment? Do you do that
+bootstrapping with raw shell code, <a href="https://docs.ansible.com/">Ansible</a>, or
+something else?</p>
+<p>Or maybe you stuff containers into <a href="https://kubernetes.io/docs/">Kubernetes</a>?
+The docs for Vault, for example, provide a <a href="https://www.vaultproject.io/docs/platform/k8s/helm">Helm
+chart</a>, sure &ndash; but what if
+your team/company doesn&rsquo;t use Helm?</p>
+<p>Or, isn&rsquo;t <em><strong>allowed</strong></em> to use Helm? We haven&rsquo;t even touched on the security
+considerations that your company might take against any tools, and those
+considerations vary wildly for the <em>same</em> tool across orgs. A version bump for a
+Java library might be a few hours of testing &amp; validation in some orgs, but
+(literally) <em>years</em> of security review in others, <em>before</em> you&rsquo;re even allowed
+to start doing those same upgrade validations.</p>
+<p>All of this begs the same question again &ndash; <em><strong>how do you actually work with
+this stuff in real life?</strong></em></p>
+<p>These, and ever more questions, are what OpenSourceCorp aims to provide answers
+&amp; perspective for. Real code, real solutions, for real enterprise challenges.</p>
+<p>If you&rsquo;d like to get involved, reach out to us!</p>
+<hr>
+<h3 id="site-roadmap">Site Roadmap</h3>
+<ul>
+<li>Wiki section for the site</li>
+<li>&ldquo;About&rdquo; page (which might partially be <em>this</em> page&rsquo;s contents moved)</li>
+<li>Core values</li>
+<li><code>osc-infra</code> arch diagram</li>
+<li>Contribution/onboarding model</li>
+<li>Target platform commentary &ndash; &ldquo;why not (strictly) Kubernetes/AWS/etc.&rdquo;, etc.
+Maybe that&rsquo;s part of core values though.</li>
+<li>Partnership model (i.e. how do we get other OSS projects to USE our platforms,
+to help enhance the value of doing everything in the open)</li>
+</ul>
 
     </div></body>
 </html>
