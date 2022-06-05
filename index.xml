@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenSourceCorp - the free and open-source enterprise on OpenSourceCorp</title>
+    <title>OpenSourceCorp - The Free and Open-Source Enterprise on OpenSourceCorp</title>
     <link>https://www.opensourcecorp.org/</link>
-    <description>Recent content in OpenSourceCorp - the free and open-source enterprise on OpenSourceCorp</description>
+    <description>Recent content in OpenSourceCorp - The Free and Open-Source Enterprise on OpenSourceCorp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jun 2022 21:17:46 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
