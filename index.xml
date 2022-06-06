@@ -6,7 +6,16 @@
     <description>Recent content in OpenSourceCorp - The Free and Open-Source Enterprise on OpenSourceCorp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jun 2022 21:20:16 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 10:39:00 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About OSC</title>
+      <link>https://www.opensourcecorp.org/wiki/about/</link>
+      <pubDate>Mon, 06 Jun 2022 10:39:00 -0500</pubDate>
+      
+      <guid>https://www.opensourcecorp.org/wiki/about/</guid>
+      <description>Originally named &amp;ldquo;Project Optimus&amp;rdquo; and started in March 2021 by Ryan Price, OpenSourceCorp (OSC) was first intended as a dumping ground for all of Ryan&amp;rsquo;s own disparate, growing code repos. As he started to add new codebases, he thought it might be more valuable to readers to try organizing the content into something more cohesive. After a lot of spooling on how that might look &amp;amp; act, OSC was publicly announced in July 2021.</description>
+    </item>
+    
     <item>
       <title>Progress Report 2022-06-05</title>
       <link>https://www.opensourcecorp.org/blog/posts/2022-06-05-progress-report/</link>

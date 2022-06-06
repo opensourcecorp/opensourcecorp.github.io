@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenSourceCorp Wiki on OpenSourceCorp</title>
+    <link>https://www.opensourcecorp.org/wiki/</link>
+    <description>Recent content in OpenSourceCorp Wiki on OpenSourceCorp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jun 2022 10:39:00 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/wiki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About OSC</title>
+      <link>https://www.opensourcecorp.org/wiki/about/</link>
+      <pubDate>Mon, 06 Jun 2022 10:39:00 -0500</pubDate>
+      
+      <guid>https://www.opensourcecorp.org/wiki/about/</guid>
+      <description>Originally named &amp;ldquo;Project Optimus&amp;rdquo; and started in March 2021 by Ryan Price, OpenSourceCorp (OSC) was first intended as a dumping ground for all of Ryan&amp;rsquo;s own disparate, growing code repos. As he started to add new codebases, he thought it might be more valuable to readers to try organizing the content into something more cohesive. After a lot of spooling on how that might look &amp;amp; act, OSC was publicly announced in July 2021.</description>
+    </item>
+    
+  </channel>
+</rss>
