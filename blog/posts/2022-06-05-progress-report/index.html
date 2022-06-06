@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" type="image/x-icon" href="/images/osc-logo.png">
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <a href="/">
+    <img src="/images/osc-logo.png" style="width:120px;height:100px;" alt="OSC Logo"/>
+  </a>
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    
+    <li><a href="https://github.com/opensourcecorp">OSC Source Code</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>Progress Report 2022-06-05</h2><em>By Ryan J. Price @ 2022-06-05 21:20:16 -0500 CDT; reading time 3m</em><br/><br/><br/>
+
+  <p>Not too long between updates this time, but I&rsquo;ve got a few neat pieces of news
+to share.</p>
+<ul>
+<li>
+<p>First and foremost, you may recall that I said we&rsquo;d gotten a domain name
+(<code>opensourcecorp.org</code>) in a previous post. For some time now, it&rsquo;s really just
+had some redirect rules to point folks to the GitHub Org, and to the GitHub
+Pages site for blog posts.</p>
+<p>But now, it&rsquo;s a <em><strong><a href="https://opensourcecorp.org">real-ass website!</a></strong></em> You
+might even be reading this post on it right now!</p>
+<p>It&rsquo;s still being served through GH Pages, but in a sort of nonstandard way
+(i.e. no longer using Jekyll natively), with the OSC domain instead of the GHP
+domain format. I&rsquo;m also using <a href="https://gohugo.io">Hugo</a> as the static-site
+generator instead &ndash; but not using much of its fancy features; it&rsquo;s pretty
+plain HTML &amp; CSS at the end of the day. Which, is how I&rsquo;d like it to be.</p>
+<p>The website generator repo is
+<a href="https://github.com/opensourcecorp/website">here</a>, and is being served from
+<a href="https://github.com/opensourcecorp/opensourcecorp.github.io">here</a> (just like
+it was before).</p>
+<p>I also set us up with <a href="https://github.com/opensourcecorp/website/blob/main/static/images/osc-logo.png">a sick sk8rboi
+logo</a>!
+It&rsquo;s not the prettiest thing in the world (I&rsquo;m not an artist by any stretch of
+the imagination), but I thought the &ldquo;Super-S&rdquo; style was a meta-nostalgic
+callback to how OSC is intended to be built &ndash; with accessible,
+eventually-familiar tooling.</p>
+<p>The logo is visible on the site&rsquo;s navbar, as well as being its favicon on your
+browser tab. It was designed using a custom Shape on
+<a href="https://app.diagrams.net">diagrams.net</a>, and you can find the XML-y code used
+to create it
+<a href="https://github.com/opensourcecorp/website/blob/main/osc-logo.drawio.xml">here</a>
+(with embedded comments on how to recreate it).</p>
+</li>
+<li>
+<p>Next, you may recall seeing or hearing about the linter aggregator I had
+started as the very first OSC project:
+<a href="https://github.com/opensourcecorp/rhad"><code>rhadamanthus</code></a>. Its name has now
+been shortened to just <code>rhad</code>, and has been entirely rewritten from a
+collection of shell scripts (which worked fine, and that I&rsquo;m still super proud
+of) to a Go CLI utility (which also works fine but will offer more flexibility
+in the future).</p>
+<p>I have also moved towards having <code>rhad</code> serve as much more than just a linter
+aggregator, but to be a holistic CI/CD solution akin to how a Jenkins shared
+library might work &ndash; the CI/CD subsytem will pick up your repo, and <code>rhad</code>
+will process it for all the relevant steps it needs to go from raw idea to
+production deployment. I&rsquo;m really looking forward to have <code>rhad</code> continue to
+expand in functionality as use more cases appear across OSC.</p>
+</li>
+<li>
+<p>Finally, I received some helpful feedback about some of the naming conventions
+used within OSC projects. Before all the infra tooling was consolidated into
+<a href="https://github.com/opensourcecorp/osc-infra">the monorepo</a>, each infra
+subsystem had a &ldquo;cool&rdquo; name &ndash; <code>aether</code>, <code>faro</code>, <code>chonk</code>, etc. I still think
+they&rsquo;re cool (lol), but they&rsquo;re not doing anything helpful for folks looking
+to get involved with the project.</p>
+<p>These subsystems have now been renamed throughout the codebase into more
+meaningful names according to their actual function &ndash; e.g. <code>configmgmt</code>,
+<code>netsvc</code>, and <code>datastore</code>, respectively in the above example. In the longer
+term, this should make the infra codebase more accessible to others.</p>
+<p>You may still find some lingering naming conventions in other repos across the
+GH Org, but those will get cleaned up eventually. Let me know if you find any,
+or have any feedback.</p>
+</li>
+</ul>
+<p>The update that I think is the coolest is obviously the website, so please check
+it out and let me know what you think! But before you come after me too hard:
+yes, I know it&rsquo;s &ldquo;ugly&rdquo; &ndash; it&rsquo;s mostly intentional. But if there&rsquo;s something
+you&rsquo;d like to change, feel free to open a PR to the <a href="https://github.com/opensourcecorp/website">website
+repo</a> with any layout or CSS changes
+you have in mind! I especially could use some help finding a (non-JS) way to
+make the site more mobile-friendly.</p>
+
+
+    </div></body>
+</html>

@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jun 2022 21:17:46 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Progress Report 2022-06-05</title>
+      <link>https://www.opensourcecorp.org/blog/posts/2022-06-05-progress-report/</link>
+      <pubDate>Sun, 05 Jun 2022 21:20:16 -0500</pubDate>
+      
+      <guid>https://www.opensourcecorp.org/blog/posts/2022-06-05-progress-report/</guid>
+      <description>Not too long between updates this time, but I&amp;rsquo;ve got a few neat pieces of news to share.
+First and foremost, you may recall that I said we&amp;rsquo;d gotten a domain name (opensourcecorp.org) in a previous post. For some time now, it&amp;rsquo;s really just had some redirect rules to point folks to the GitHub Org, and to the GitHub Pages site for blog posts.
+But now, it&amp;rsquo;s a real-ass website! You might even be reading this post on it right now!</description>
+    </item>
+    
+    <item>
       <title>Progress Report 2022-05-15</title>
       <link>https://www.opensourcecorp.org/blog/posts/2022-05-15-progress-report/</link>
       <pubDate>Sun, 15 May 2022 12:00:00 -0600</pubDate>
