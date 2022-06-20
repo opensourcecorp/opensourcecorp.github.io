@@ -22,7 +22,7 @@
       
   <h2>Progress Report 2022-06-20</h2>
 
-  <em>By Ryan J. Price @ 2022-06-20 15:00:00 -0500 CDT; reading time 8m</em>
+  <em>By Ryan J. Price @ 2022-06-20 15:00:00 -0500 CDT; reading time 9m</em>
   <hr/>
 
   <p>Some heavy updates in this one, so buckle up for what&rsquo;s changed!</p>
@@ -148,16 +148,16 @@ control. At this moment, this feels like a good compromise, doesn&rsquo;t requir
 to trash all the linter code I&rsquo;ve already written, and still allows for <code>rhad</code>
 to be used as a lifecycle manager post-lint.</p>
 <h3 id="website-updates">Website updates</h3>
-<ul>
-<li>
-<p>Blog has RSS feed link (but the feed itself had existed already)</p>
-</li>
-<li>
-<p>Installing Docker (or rather, packages from the <code>docker-rootless-extras</code> repo)
-on the subsystems has been throwing hash-sum mismatch errors a lot lately &ndash;
-sporadically it works, but I want to explore workarounds/solutions.</p>
-</li>
-</ul>
+<p>It turns out that Hugo (the tool used to build the site content you&rsquo;re reading)
+automatically generates an RSS feed for any of its &ldquo;list&rdquo; page types. The
+landing page for blog posts here is a &ldquo;list&rdquo; page. Hence, we have an RSS feed!
+It&rsquo;s the link under the orange RSS buttons at the top of the blog landing page,
+and at the bottom of <em>this</em> page.</p>
+<p>If you&rsquo;re not into feeds, that&rsquo;s ok! Stay tuned on the usual social media feeds
+for OSC updates. If you <em>are</em> into feeds, and are about to come after me about
+putting out an RSS feed and not an Atom feed, bear with me! Generating an Atom
+feed is more work than RSS using Hugo, because RSS comes for free out of the
+box. But it&rsquo;s on the roadmap!</p>
 <h3 id="miscellaneous">Miscellaneous</h3>
 <ul>
 <li>
@@ -208,6 +208,10 @@ more.</p>
 </li>
 </ul>
 
+
+  <br/><br/>
+
+  <a href="/blog/index.xml"><img alt="rss-feed" src="/images/rss.png"/></a> <em>&lt;-- Subscribe for updates!</em>
 
     </div></body>
 </html>
