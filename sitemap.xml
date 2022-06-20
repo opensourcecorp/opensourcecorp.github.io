@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.opensourcecorp.org/wiki/about/</loc>
-    <lastmod>2022-06-06T10:39:00-05:00</lastmod>
-  </url><url>
     <loc>https://www.opensourcecorp.org/</loc>
+    <lastmod>2022-06-20T15:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://www.opensourcecorp.org/blog/posts/2022-06-20-progress-report/</loc>
+    <lastmod>2022-06-20T15:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://www.opensourcecorp.org/wiki/about/</loc>
     <lastmod>2022-06-06T10:39:00-05:00</lastmod>
   </url><url>
     <loc>https://www.opensourcecorp.org/wiki/</loc>

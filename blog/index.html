@@ -27,6 +27,14 @@
 <ul>
   
     <li>
+      <h4><a href="https://www.opensourcecorp.org/blog/posts/2022-06-20-progress-report/">Progress Report 2022-06-20</a></h4>
+      <p><em>Ryan J. Price, 2022-06-20</em></p>
+      Some heavy updates in this one, so buckle up for what&rsquo;s changed!
+Secrets management Up until now, OSC has been strictly leveraging an implementation of Salt&rsquo;s Pillar functionality for secrets management &ndash; and that implementation is the default, which is &ldquo;store all secrets on the configmgmt disk&rdquo;. While this has worked fine (and can be a valid strategy in some enterprise environments), it&rsquo;s not what you would call &ldquo;best-practice&rdquo;. If the configmgmt subsystem itself is ever compromised, every single piece of sensitive data is accessible to the attacker at once &ndash; default Pillar data is just stored in plaintext on disk. <a href="https://www.opensourcecorp.org/blog/posts/2022-06-20-progress-report/">(more)</a>
+      <br/><br/>
+    </li>
+  
+    <li>
       <h4><a href="https://www.opensourcecorp.org/blog/posts/2022-06-05-progress-report/">Progress Report 2022-06-05</a></h4>
       <p><em>Ryan J. Price, 2022-06-05</em></p>
       Not too long between updates this time, but I&rsquo;ve got a few neat pieces of news to share.

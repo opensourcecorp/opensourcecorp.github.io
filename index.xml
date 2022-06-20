@@ -6,7 +6,17 @@
     <description>Recent content in OpenSourceCorp - The Free and Open-Source Enterprise on OpenSourceCorp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jun 2022 10:39:00 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jun 2022 15:00:00 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Progress Report 2022-06-20</title>
+      <link>https://www.opensourcecorp.org/blog/posts/2022-06-20-progress-report/</link>
+      <pubDate>Mon, 20 Jun 2022 15:00:00 -0500</pubDate>
+      
+      <guid>https://www.opensourcecorp.org/blog/posts/2022-06-20-progress-report/</guid>
+      <description>Some heavy updates in this one, so buckle up for what&amp;rsquo;s changed!
+Secrets management Up until now, OSC has been strictly leveraging an implementation of Salt&amp;rsquo;s Pillar functionality for secrets management &amp;ndash; and that implementation is the default, which is &amp;ldquo;store all secrets on the configmgmt disk&amp;rdquo;. While this has worked fine (and can be a valid strategy in some enterprise environments), it&amp;rsquo;s not what you would call &amp;ldquo;best-practice&amp;rdquo;. If the configmgmt subsystem itself is ever compromised, every single piece of sensitive data is accessible to the attacker at once &amp;ndash; default Pillar data is just stored in plaintext on disk.</description>
+    </item>
+    
     <item>
       <title>About OSC</title>
       <link>https://www.opensourcecorp.org/wiki/about/</link>
