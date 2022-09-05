@@ -6,7 +6,17 @@
     <description>Recent content in OpenSourceCorp - The Free and Open-Source Enterprise on OpenSourceCorp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jun 2022 15:00:00 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2022 01:45:00 -0500</lastBuildDate><atom:link href="https://www.opensourcecorp.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Progress Report 2022-09-05</title>
+      <link>https://www.opensourcecorp.org/blog/posts/2022-09-05-progress-report/</link>
+      <pubDate>Mon, 05 Sep 2022 01:45:00 -0500</pubDate>
+      
+      <guid>https://www.opensourcecorp.org/blog/posts/2022-09-05-progress-report/</guid>
+      <description>Wooooo boy howdy, what a STRETCH it&amp;rsquo;s been. Lots of things in life &amp;amp; work have come up and kept me away from working on OSC, but I wanted to throw out something quick to let folks know that neither I nor the project are dead.
+rhad has been under a lot of recent work. Some months ago, the concept of a Rhadfile was introduced to the codebase, which is a config-file format for rhad executions.</description>
+    </item>
+    
     <item>
       <title>Progress Report 2022-06-20</title>
       <link>https://www.opensourcecorp.org/blog/posts/2022-06-20-progress-report/</link>

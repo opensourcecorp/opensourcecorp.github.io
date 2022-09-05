@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html><head>
+  <meta lang="en" charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" type="image/x-icon" href="/images/osc-logo.png">
+  <link rel="stylesheet" href="/css/main.css"/>
+  <title>OpenSourceCorp</title>
+</head>
+<body><div class="sidenav">
+  <a href="/">
+    <img src="/images/osc-logo.png" style="width:120px;height:100px;" alt="OSC Logo"/>
+  </a>
+  <h3>Navigation</h3>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/wiki/index.html">Wiki</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="https://github.com/opensourcecorp">Project SCM</a></li>
+  </ul>
+</div>
+<div id="content" class="content">
+      
+  <h2>Progress Report 2022-09-05</h2>
+
+  <em>By Ryan J. Price @ 2022-09-05 01:45:00 -0500 CDT; reading time 3m</em>
+  <hr/>
+
+  <p>Wooooo boy howdy, what a STRETCH it&rsquo;s been. Lots of things in life &amp; work have
+come up and kept me away from working on OSC, but I wanted to throw out
+something quick to let folks know that neither I nor the project are dead.</p>
+<ul>
+<li>
+<p><a href="https://github.com/opensourcecorp/rhad"><code>rhad</code></a> has been under a lot of
+recent work. Some months ago, the concept of a <code>Rhadfile</code> was introduced to
+the codebase, which is a config-file format for <code>rhad</code> executions. The first
+pass at this was targeting an INI format, for its simplicity &amp; readability. As
+it turns out, parsing an INI file is&hellip; interesting, to say the least. So,
+<code>Rhadfiles</code> are now <a href="https://toml.io">TOML</a>-formatted. TOML is a nice
+middle-ground format of being readable, writable, and parseable. Right now,
+<code>Rhadfiles</code> only support providing a version number for your code tree
+modules, but more options will spring up as they become apparent.</p>
+<p>There&rsquo;s also <a href="https://github.com/opensourcecorp/rhad/pkgs/container/rhad/tree/main/scripts/run-rhad-lint.sh">a helper
+script</a>
+that runs the GitHub Super-Linter, and <code>rhad</code> following, as well as a <code>make add-local-symlinks</code> target to symlink the script onto (what I hope is) your
+<code>$PATH</code>. Try it out and let me know if you run into any notable bugs.</p>
+<p><code>rhad</code> is now version <code>v0.3.0</code>, and the <a href="https://github.com/opensourcecorp/rhad/pkgs/container/rhad">container image on
+GHCR</a> reflects
+this in its <code>:latest</code> tag (I&rsquo;ll get around to getting version-tagged builds
+done in GHA at some point).</p>
+</li>
+<li>
+<p>While working on <code>rhad</code>, I started to think that abstracting out some of the
+reusable Go functionality might be beneficial in the long run &ndash; so now we
+have <a href="https://github.com/opensourcecorp/go-common"><code>a repo to house that</code></a>
+(currently it&rsquo;s just logging functionality). This kind of felt like premature
+optimization, since nothing else except <code>ghostwriter</code> is using this shareable
+functionality, but it ended up teaching me an awful lot about how to work with
+dependency packages in Go that <em>you</em> control &ndash; like being able to override
+exported fields in child packages to disable log output for tests, set custom
+log prefixes without boilerplate, etc. Seeing it all come together was a cool
+feeling.</p>
+</li>
+</ul>
+<p>And now for the parts that I haven&rsquo;t touched in long enough that I forget most
+of the finer details:</p>
+<ul>
+<li>
+<p>The <a href="https://github.com/opensourcecorp/osc-infra/tree/feature/bootstrapper-add-aws"><code>osc-infra</code>
+bootstrapper</a>
+is almost ready to support AWS! we&rsquo;re using Terraform Provisioners like
+sinners. It&rsquo;s neat. Also, as mentioned in the last post <code>osc-infra</code> is now
+under tagged releases, and the most recent version is now v0.2.0.</p>
+</li>
+<li>
+<p>The <code>local-vm</code> bootstrapper has been refactored to not build separate images
+for ever ysingle subsystem, and just run provision calls at runtime. This
+makes the OSC cluster <em><strong>way faster</strong></em> to bootstrap, saves on disk space since
+there&rsquo;s no persistent storage of other images, etc. This also came along with
+a number of other cleanup changes while I was crawling around in the codebase,
+e.g. the <code>imgbuilder</code> subsystem is now named <code>baseimg</code>.</p>
+</li>
+<li>
+<p>Previously, when setting up a <code>redis</code> service on <code>datastore</code>, I must have
+stumbled onto a docs page that told readers that the ideal way to install
+<code>redis</code> was to compile it from source, and <em><strong>not</strong></em> use something like an APT
+repo. I&rsquo;m not sure what I found, or if something changed, but <code>redis</code> is now
+installed via an APT repo, and it works fine <code>:shrug:</code></p>
+</li>
+<li>
+<p><code>configmgmt</code> had a Salt block that added a swapfile to cluster nodes, and that
+block was commented out. I don&rsquo;t recall <em><strong>why</strong></em> it was commented out, but
+now it&rsquo;s not, and is working as expected. All nodes now have a swapfile
+(insert Oprah &ldquo;you get a car&rdquo; meme here).</p>
+</li>
+</ul>
+<p>Like I said above, this isn&rsquo;t a massive update, nor is it super clean, but
+posting all this to say that I&rsquo;ve not disappeared, nor stopped working on OSC.
+Life, uh, finds a way (to get in the way).</p>
+
+
+  <br/><br/>
+
+  <a href="/blog/index.xml"><img alt="rss-feed" src="/images/rss.png"/></a> <em>&lt;-- Subscribe for updates!</em>
+
+    </div></body>
+</html>
