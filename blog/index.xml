@@ -14,7 +14,7 @@
       
       <guid>https://www.opensourcecorp.org/blog/posts/2022-09-05-progress-report/</guid>
       <description>Wooooo boy howdy, what a STRETCH it&amp;rsquo;s been. Lots of things in life &amp;amp; work have come up and kept me away from working on OSC, but I wanted to throw out something quick to let folks know that neither I nor the project are dead.
-rhad has been under a lot of recent work. Some months ago, the concept of a Rhadfile was introduced to the codebase, which is a config-file format for rhad executions.</description>
+rhad has been under a lot of recent work. It is now version v0.3.0. While most of the updates were a lot of internal refactoring that aren&amp;rsquo;t going to be very visible to users, the minor-version bump is because rhad now runs go vet as part of its Go linter runs.</description>
     </item>
     
     <item>

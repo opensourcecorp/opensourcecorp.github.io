@@ -22,7 +22,7 @@
       
   <h2>Progress Report 2022-09-05</h2>
 
-  <em>By Ryan J. Price @ 2022-09-05 01:45:00 -0500 CDT; reading time 3m</em>
+  <em>By Ryan J. Price @ 2022-09-05 01:45:00 -0500 CDT; reading time 4m</em>
   <hr/>
 
   <p>Wooooo boy howdy, what a STRETCH it&rsquo;s been. Lots of things in life &amp; work have
@@ -31,7 +31,14 @@ something quick to let folks know that neither I nor the project are dead.</p>
 <ul>
 <li>
 <p><a href="https://github.com/opensourcecorp/rhad"><code>rhad</code></a> has been under a lot of
-recent work. Some months ago, the concept of a <code>Rhadfile</code> was introduced to
+recent work. It is now version <code>v0.3.0</code>. While most of the updates were a lot
+of internal refactoring that aren&rsquo;t going to be very visible to users, the
+minor-version bump is because <code>rhad</code> now runs <code>go vet</code> as part of its Go
+linter runs. New feature, new minor version. Internal changes include a
+filesystem-based state tracking mechanism (previously <code>rhad</code> used global vars
+to track run state), and decoupling of reusable components to a separate repo
+(discussed in the next bullet below).</p>
+<p>Additionally: some months ago, the concept of a <code>Rhadfile</code> was introduced to
 the codebase, which is a config-file format for <code>rhad</code> executions. The first
 pass at this was targeting an INI format, for its simplicity &amp; readability. As
 it turns out, parsing an INI file is&hellip; interesting, to say the least. So,
@@ -43,7 +50,7 @@ modules, but more options will spring up as they become apparent.</p>
 script</a>
 that runs the GitHub Super-Linter, and <code>rhad</code> following, as well as a <code>make add-local-symlinks</code> target to symlink the script onto (what I hope is) your
 <code>$PATH</code>. Try it out and let me know if you run into any notable bugs.</p>
-<p><code>rhad</code> is now version <code>v0.3.0</code>, and the <a href="https://github.com/opensourcecorp/rhad/pkgs/container/rhad">container image on
+<p>The <a href="https://github.com/opensourcecorp/rhad/pkgs/container/rhad">container image on
 GHCR</a> reflects
 this in its <code>:latest</code> tag (I&rsquo;ll get around to getting version-tagged builds
 done in GHA at some point).</p>
